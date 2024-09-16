@@ -1,0 +1,137 @@
+[
+    {
+        "id": "1",
+        "estate_title": "Luxury Apartment in Downtown",
+        "segment_name": "Apartment",
+        "description": "A stunning 3-bedroom apartment with modern interiors and breathtaking city views.",
+        "price": "$1,500,000",
+        "status": "sale",
+        "area": "2500 sq ft",
+        "location": "Downtown City Center",
+        "facilities": [
+            "Living room",
+            "Swimming pool",
+            "Kitchen",
+            "Gym"
+        ],
+        "image": "https://example.com/image1.jpg"
+    },
+    {
+        "id": "2",
+        "estate_title": "Cozy Suburban Home",
+        "segment_name": "House",
+        "description": "A charming 4-bedroom family home in a peaceful suburban neighborhood.",
+        "price": "$750,000",
+        "status": "sale",
+        "area": "3000 sq ft",
+        "location": "Suburbia Town",
+        "facilities": [
+            "Living room",
+            "Swimming pool",
+            "Kitchen",
+            "Garage"
+        ],
+        "image": "https://example.com/image2.jpg"
+    },
+    {
+        "id": "3",
+        "estate_title": "Beachfront Villa",
+        "segment_name": "Villa",
+        "description": "A luxurious villa located directly on the beach with panoramic sea views.",
+        "price": "$2,800,000",
+        "status": "sale",
+        "area": "3500 sq ft",
+        "location": "Oceanfront Beach",
+        "facilities": [
+            "Living room",
+            "Swimming pool",
+            "Kitchen",
+            "Private beach access"
+        ],
+        "image": "https://example.com/image3.jpg"
+    },
+    {
+        "id": "4",
+        "estate_title": "Modern Condo for Rent",
+        "segment_name": "Condo",
+        "description": "A 2-bedroom condo in a trendy urban area, ideal for young professionals.",
+        "price": "$2,500/month",
+        "status": "rent",
+        "area": "1500 sq ft",
+        "location": "Urban District",
+        "facilities": [
+            "Living room",
+            "Swimming pool",
+            "Kitchen",
+            "Gym"
+        ],
+        "image": "https://example.com/image4.jpg"
+    },
+    {
+        "id": "5",
+        "estate_title": "Spacious Country House",
+        "segment_name": "House",
+        "description": "A 5-bedroom house with a large garden, perfect for those seeking tranquility.",
+        "price": "$900,000",
+        "status": "sale",
+        "area": "4000 sq ft",
+        "location": "Countryside Hills",
+        "facilities": [
+            "Living room",
+            "Swimming pool",
+            "Kitchen",
+            "Garden"
+        ],
+        "image": "https://example.com/image5.jpg"
+    },
+    {
+        "id": "6",
+        "estate_title": "Penthouse with Rooftop Pool",
+        "segment_name": "Penthouse",
+        "description": "A high-end penthouse with a private rooftop pool and stunning cityscape views.",
+        "price": "$3,200,000",
+        "status": "sale",
+        "area": "4500 sq ft",
+        "location": "City Skyline Heights",
+        "facilities": [
+            "Living room",
+            "Swimming pool",
+            "Kitchen",
+            "Rooftop pool"
+        ],
+        "image": "https://example.com/image6.jpg"
+    },
+    {
+        "id": "7",
+        "estate_title": "Mountain Cabin for Rent",
+        "segment_name": "Cabin",
+        "description": "A cozy cabin retreat nestled in the mountains, offering peace and quiet.",
+        "price": "$1,200/month",
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "Mountain View Retreat",
+        "facilities": [
+            "Living room",
+            "Kitchen",
+            "Fireplace"
+        ],
+        "image": "https://example.com/image7.jpg"
+    },
+    {
+        "id": "8",
+        "estate_title": "Townhouse in a Gated Community",
+        "segment_name": "Townhouse",
+        "description": "A modern townhouse in a safe, gated community with 24/7 security.",
+        "price": "$600,000",
+        "status": "sale",
+        "area": "2200 sq ft",
+        "location": "Gated Community Hills",
+        "facilities": [
+            "Living room",
+            "Kitchen",
+            "Garage",
+            "24/7 Security"
+        ],
+        "image": "https://example.com/image8.jpg"
+    }
+]

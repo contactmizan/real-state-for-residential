@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import { IoPartlySunnyOutline } from "react-icons/io5";
 
 const Navbar = () => {
 
@@ -34,7 +35,9 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-2xl font-normal font-questrial">Rise <span className="">Group</span></a>
+                <a className="btn btn-ghost text-2xl font-normal font-questrial">Rise
+                    <IoPartlySunnyOutline></IoPartlySunnyOutline>
+                    <span className="">Group</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
