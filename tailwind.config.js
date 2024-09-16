@@ -2,10 +2,15 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", 
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        questrial: '"Questrial", sans-serif;',
+        montserrat: ' "Montserrat Alternates", sans-serif;'
+      }
+    },
   },
   plugins: [
     require('daisyui'),
