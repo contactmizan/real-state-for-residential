@@ -14,7 +14,7 @@
             "Kitchen",
             "Gym"
         ],
-        "image": "https://example.com/image1.jpg"
+        "image": "https://i.ibb.co.com/x3Xtpyj/pexels-chaitaastic-1918291.jpg"
     },
     {
         "id": "2",
@@ -31,7 +31,7 @@
             "Kitchen",
             "Garage"
         ],
-        "image": "https://example.com/image2.jpg"
+        "image": "https://i.ibb.co.com/tZBMqzC/pexels-brett-sayles-2121345.jpg"
     },
     {
         "id": "3",
@@ -48,7 +48,7 @@
             "Kitchen",
             "Private beach access"
         ],
-        "image": "https://example.com/image3.jpg"
+        "image": "https://i.ibb.co.com/VVG2tB3/pexels-thanhhoa-tran-640546-1488327.jpg"
     },
     {
         "id": "4",
@@ -65,7 +65,7 @@
             "Kitchen",
             "Gym"
         ],
-        "image": "https://example.com/image4.jpg"
+        "image": "https://i.ibb.co.com/G5K94gs/pexels-bluerhinomedia-3663530.jpg"
     },
     {
         "id": "5",
@@ -82,7 +82,7 @@
             "Kitchen",
             "Garden"
         ],
-        "image": "https://example.com/image5.jpg"
+        "image": "https://i.ibb.co.com/dQFR8T3/pexels-kaboompics-6343.jpg"
     },
     {
         "id": "6",
@@ -99,7 +99,7 @@
             "Kitchen",
             "Rooftop pool"
         ],
-        "image": "https://example.com/image6.jpg"
+        "image": "https://i.ibb.co.com/vvXRZWY/pexels-madbyte-36362.jpg"
     },
     {
         "id": "7",
@@ -115,7 +115,7 @@
             "Kitchen",
             "Fireplace"
         ],
-        "image": "https://example.com/image7.jpg"
+        "image": "https://i.ibb.co.com/sV85vD1/pexels-rauf-allahverdiyev-561368-2805285.jpg"
     },
     {
         "id": "8",
@@ -132,6 +132,6 @@
             "Garage",
             "24/7 Security"
         ],
-        "image": "https://example.com/image8.jpg"
+        "image": "https://i.ibb.co.com/SPYkPDH/pexels-mia-dalisay-594958-17463501.jpg"
     }
 ]

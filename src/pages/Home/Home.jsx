@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import Header from "../Shared/Header/Header";
 import Navbar from "../Shared/Navbar/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import PropertiesCard from "./PropertiesCard";
 
 const Home = () => {
 
-    const [properties, setProperties] = useState([]);
+    const properties = useLoaderData();
+    console.log(properties);
+
 
     useEffect(() => {
         fetch('properties.json')
@@ -19,13 +22,11 @@ const Home = () => {
             <Navbar></Navbar>
             <h2 className="text-3xl font-questrial">This is Home data: {properties.length}</h2>
 
+            {/* property container */}
             <div>
                 {
-                    properties.map(property => <Link
-                        className="block"
-                        key={property.id}
-                        to={`/property/${property.id}`}
-                    >{property.estate_title}</Link>)
+                    properties.map(property => <PropertiesCard key={property.id} properties={property}>
+                    </PropertiesCard>)
                 }
             </div>
 
