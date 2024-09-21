@@ -1,7 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoPartlySunnyOutline } from "react-icons/io5";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSingOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
@@ -56,9 +66,15 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <Link to="/login">
-                    <button className="btn">Login</button>
-                </Link>
+                {
+                    user ?
+                        <button onClick={handleSingOut} className="btn">Sign Out</button>
+                        :
+                        <Link to="/login">
+                            <button className="btn">Login</button>
+                        </Link>
+                }
+
             </div>
         </div>
     );
