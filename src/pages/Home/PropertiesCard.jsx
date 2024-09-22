@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const PropertiesCard = ({ properties }) => {
-    const { estate_title, image } = properties;
+    const { estate_title, image, description, id } = properties;
     return (
 
         <div className="card bg-base-100 w-96 shadow-xl mb-5">
@@ -12,9 +13,19 @@ const PropertiesCard = ({ properties }) => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{estate_title}</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                {
+                    description.length > 100 ?
+                        <p>{description.slice(0, 100)}<Link
+                            to={`/properties/${id}`}
+                            className="text-blue-600 font-bold">Read More...</Link></p>
+                        : <p>{description}</p>
+                }
+
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <Link to={`/properties/${id}`}>
+                        <button className="btn btn-primary">See Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

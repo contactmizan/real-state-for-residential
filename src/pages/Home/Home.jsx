@@ -23,7 +23,7 @@ const Home = () => {
             <h2 className="text-3xl font-questrial">This is Home data: {properties.length}</h2>
 
             {/* property container */}
-            <div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     properties.map(property => <PropertiesCard key={property.id} properties={property}>
                     </PropertiesCard>)

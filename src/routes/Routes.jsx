@@ -3,6 +3,8 @@ import Root from "../layouts/Root";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/LOgin";
 import Register from "../pages/Register/Register";
+import PropertyCard from "../pages/PropertyCard/PropertyCard";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -13,7 +15,11 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('properties.json')
+                loader: () => fetch('/properties.json')
+            },
+            {
+                path: '/properties/:id',
+                element: <PrivateRoute><PropertyCard></PropertyCard></PrivateRoute>
             },
             {
                 path: '/login',
