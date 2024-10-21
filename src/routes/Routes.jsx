@@ -19,7 +19,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/properties/:id',
-                element: <PrivateRoute><PropertyCard></PropertyCard></PrivateRoute>
+                element: <PrivateRoute><PropertyCard></PropertyCard></PrivateRoute>,
+                loader: () => fetch('/properties.json')
             },
             {
                 path: '/login',

@@ -4,6 +4,7 @@ import Navbar from "../Shared/Navbar/Navbar";
 import { Link, useLoaderData } from "react-router-dom";
 import PropertiesCard from "./PropertiesCard";
 
+
 const Home = () => {
 
     const properties = useLoaderData();
@@ -18,8 +19,8 @@ const Home = () => {
 
     return (
         <div>
-            <Header></Header>
             <Navbar></Navbar>
+            <Header></Header>
             <h2 className="text-3xl font-questrial">This is Home data: {properties.length}</h2>
 
             {/* property container */}
