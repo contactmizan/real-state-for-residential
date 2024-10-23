@@ -1,5 +1,4 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import Header from "../Shared/Header/Header";
 import Navbar from "../Shared/Navbar/Navbar";
 import Footer from "../Shared/Footer/Footer";
 
@@ -11,7 +10,7 @@ const PropertyCard = () => {
     const { estate_title, image, description, price, location, status, segment_name, area, facilities } = filteredData[0];
     return (
         <div>
-            <Header></Header>
+
             <Navbar></Navbar>
 
             <div className=" grid grid-cols-1 lg:grid-cols-4 gap-6 my-4">

@@ -1,11 +1,10 @@
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, signInWithPopup, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 
 const auth = getAuth(app);
-
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
@@ -26,7 +25,7 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     }
 
-    // Add a method to sign in with GitHub
+    // GitHub Sign-In Method
     const signInWithGitHub = async () => {
         const provider = new GithubAuthProvider();
         setLoading(true);
@@ -40,7 +39,23 @@ const AuthProvider = ({ children }) => {
         } finally {
             setLoading(false);
         }
-    }
+    };
+
+    // Google Sign-In Method (Revised)
+    const signInwithGoogle = async () => {
+        const provider = new GoogleAuthProvider();
+        setLoading(true);
+        try {
+            const result = await signInWithPopup(auth, provider);  // Use await here
+            const user = result.user;
+            console.log('User signed in with Google:', user);
+            setUser(user);  // Update the user state
+        } catch (error) {
+            console.error('Error during Google sign-in:', error.message);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
@@ -59,7 +74,8 @@ const AuthProvider = ({ children }) => {
         createUser,
         signIn,
         logOut,
-        signInWithGitHub // Include the GitHub sign-in method in the context
+        signInWithGitHub,
+        signInwithGoogle // Include Google sign-in in the context
     };
 
     return (

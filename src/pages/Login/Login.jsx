@@ -3,16 +3,30 @@ import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Footer from "../Shared/Footer/Footer";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-    const { signIn, signInWithGitHub } = useContext(AuthContext);
+    const { signIn, signInWithGitHub, signInwithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
     const handleGitHubSignIn = async () => {
-        await signInWithGitHub();
-        navigate(location?.state ? location.state : '/');
+        try {
+            await signInWithGitHub();
+            navigate(location?.state ? location.state : '/');
+        } catch (error) {
+            console.error("GitHub Sign-in Error:", error);
+        }
+    };
+
+    // Add async/await here to ensure the navigation happens after sign-in success
+    const handleGoogleSignIn = async () => {
+        try {
+            await signInwithGoogle();  // Await Google sign-in
+            navigate(location?.state ? location.state : '/');
+        } catch (error) {
+            console.error("Google Sign-in Error:", error.message);
+        }
     };
 
     const handleLogin = e => {
@@ -55,6 +69,14 @@ const Login = () => {
                         <button className="btn btn-primary">Login</button>
                     </div>
                 </form>
+
+                {/* google popup log in */}
+                <div className="text-center">
+                    <button onClick={handleGoogleSignIn} className="btn btn-primary">
+                        <FaGoogle className="text-3xl mr-2" /> Google Login
+                    </button>
+                </div>
+
                 {/* GitHub login */}
                 <div className="space-y-2 text-center flex flex-col items-center mb-2">
                     <h2>or</h2>
@@ -62,6 +84,7 @@ const Login = () => {
                         <FaGithub className="text-3xl" />
                     </button>
                 </div>
+
                 <p className="text-center">Don't have an account? Please <Link to="/register" className="hover:text-blue-700 hover:underline text-blue-400 font-bold">Register</Link></p>
             </div>
             <div className="mt-4">
