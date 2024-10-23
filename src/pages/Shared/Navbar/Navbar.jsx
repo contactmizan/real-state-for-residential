@@ -2,11 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 import { IoPartlySunnyOutline } from "react-icons/io5";
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { space } from "postcss/lib/list";
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
-
+    console.log(user)
     const handleSingOut = () => {
         logOut()
             .then()
@@ -60,10 +61,17 @@ const Navbar = () => {
                 {/* navbar login image */}
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img
-                            alt="Tailwind CSS Navbar component"
-                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        {
+                            user && <img
+                                alt="Tailwind CSS Navbar component"
+                                src={user.photoURL} />
+                        }
                     </div>
+                </div>
+                <div>
+                    {
+                        user && <span>{user.email}</span>
+                    }
                 </div>
 
                 {
