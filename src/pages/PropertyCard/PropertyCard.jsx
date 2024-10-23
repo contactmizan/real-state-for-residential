@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Header from "../Shared/Header/Header";
 import Navbar from "../Shared/Navbar/Navbar";
+import Footer from "../Shared/Footer/Footer";
 
 const PropertyCard = () => {
     const { id } = useParams();
@@ -32,10 +33,11 @@ const PropertyCard = () => {
                             ))
                         }
                     </ul>
-                    <p className="font-bold">{area}</p>
+                    <p className="font-bold">Area: {area}</p>
                     <p className="text-xl text-red-500">{price}</p>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 }

@@ -11,12 +11,13 @@ const Home = () => {
     const properties = useLoaderData();
     console.log(properties);
 
+    const [dataLength, setDataLength] = useState(6);
 
-    useEffect(() => {
-        fetch('properties.json')
-            .then(res => res.json())
-            .then(data => setProperties(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('properties.json')
+    //         .then(res => res.json())
+    //         .then(data => setProperties(data))
+    // }, [])
 
     return (
         <div>
@@ -27,10 +28,18 @@ const Home = () => {
             {/* property container */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    properties.map(property => <PropertiesCard key={property.id} properties={property}>
+                    properties.slice(0, dataLength).map(property => <PropertiesCard key={property.id} properties={property}>
                     </PropertiesCard>)
                 }
             </div>
+            
+            <div className={`w-full flex justify-center ${dataLength === properties.length ? 'hidden' : ''}`}>
+                <button
+                    onClick={() => setDataLength(properties.length)}
+                    className="btn btn-primary my-4">Show all..
+                </button>
+            </div>
+
             <Footer></Footer>
         </div>
     );
