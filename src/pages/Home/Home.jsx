@@ -3,6 +3,7 @@ import Header from "../Shared/Header/Header";
 import Navbar from "../Shared/Navbar/Navbar";
 import { Link, useLoaderData } from "react-router-dom";
 import PropertiesCard from "./PropertiesCard";
+import Footer from "../Shared/Footer/Footer";
 
 
 const Home = () => {
@@ -30,7 +31,7 @@ const Home = () => {
                     </PropertiesCard>)
                 }
             </div>
-
+            <Footer></Footer>
         </div>
     );
 };

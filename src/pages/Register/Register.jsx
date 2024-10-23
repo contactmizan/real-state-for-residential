@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Footer from "../Shared/Footer/Footer";
 
 
 const Register = () => {
@@ -78,6 +79,9 @@ const Register = () => {
                     </div>
                 </form>
                 <p className="text-center">Already have an account? Please <Link to="/login" className="hover:text-blue-700 hover:underline text-blue-400 font-bold">Login</Link></p>
+            </div>
+            <div className="mt-4">
+                <Footer></Footer>
             </div>
         </div>
     );
