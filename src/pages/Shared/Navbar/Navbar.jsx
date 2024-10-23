@@ -46,9 +46,11 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-2xl font-normal font-questrial">Rise
-                    <IoPartlySunnyOutline></IoPartlySunnyOutline>
-                    <span className="">Group</span></a>
+                <Link to="/">
+                    <a className="btn btn-ghost text-2xl font-normal font-questrial">Rise
+                        <IoPartlySunnyOutline></IoPartlySunnyOutline>
+                        <span className="">Group</span></a>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -70,7 +72,7 @@ const Navbar = () => {
                 </div>
                 <div>
                     {
-                        user && <span>{user.email}</span>
+                        user && <span className="text-xs text-green-700">{user.email}</span>
                     }
                 </div>
 
